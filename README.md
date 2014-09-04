@@ -13,7 +13,7 @@ This is an AMD loader for [Handlebars semantic templates](http://handlebarsjs.co
 Notes:
 
 - The ``text`` and ``hbar`` plugins can be removed at build-time using ``r.js`` (with the ``stubModules`` setting).
-- The extension ``.html`` is assumed, and this makes loading templates similar to loading JavaScript files with RequireJS (all extensions are assumed).
+- The extension ``.html`` is assmumed, and this makes loading templates similar to loading JavaScript files with RequireJS (all extensions are assumned).
 
 ## Changelog
 
