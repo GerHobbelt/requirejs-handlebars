@@ -8,12 +8,12 @@ This is an AMD loader for [Handlebars semantic templates](http://handlebarsjs.co
 
 - Uses an external HandlebarsJS engine (distributed by the Handlebars team).
 - Uses the official ``text`` loader plugin maintained by the RequireJS team.
-- You don't have to specify the template file extension (``.html is assumed``, but this is configurable).
+- You don't have to specify the template file extension (``.hbs is assumed``, but this is configurable).
 
 Notes:
 
 - The ``text`` and ``hbar`` plugins can be removed at build-time using ``r.js`` (with the ``stubModules`` setting).
-- The extension ``.html`` is assmumed, and this makes loading templates similar to loading JavaScript files with RequireJS (all extensions are assumned).
+- The extension ``.hbs`` is assumed, and this makes loading templates similar to loading JavaScript files with RequireJS (all extensions are assumed).
 
 ## Changelog
 
@@ -74,7 +74,7 @@ require.config({
   // some paths and shims
 
   hbars: {
-    extension: '.hbs', // default = '.html'
+    extension: '.hbs', // default = '.hbs'
     compileOptions: {}  // options object which is passed to Handlebars compiler
   }
 });
@@ -99,7 +99,7 @@ If you don't use any extra tool to manage your libraries, need to manually repla
 
         // replace handlebars with the runtime version
         if (moduleName === 'Handlebars') {
-            path = path.replace('handlebars.js','handlebars.runtime.js');
+            path = path.replace('handlebars.js', 'handlebars.runtime.js');
             content = fs.readFileSync(path).toString();
             content = content.replace(/(define\()(function)/, '$1"handlebars", $2');
         }
